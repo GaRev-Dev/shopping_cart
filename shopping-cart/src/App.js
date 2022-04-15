@@ -7,9 +7,9 @@ import Title from './components/Title'
 class App extends Component {
   state = {
     productos: [
-      { name: 'Tomate', price: 1500, img: '/productos/tomate.jpg' },
-      { name: 'Arbejas', price: 2500, img: '/productos/arbejas.jpg' },
-      { name: 'Lechuga', price: 500, img: '/productos/lechuga.jpg' }
+      { name: 'Teclado', price: 1500, img: '/productos/teclado.png' },
+      { name: 'Raton', price: 2500, img: '/productos/mouse.png' },
+      { name: 'Auriculares', price: 500, img: '/productos/auriculares.png' }
     ],
     carro: [],
     esCarroVisible: false
@@ -40,6 +40,7 @@ class App extends Component {
     }
     this.setState({ esCarroVisible: !this.state.esCarroVisible })
   }
+
 
   render() {
     const {esCarroVisible} = this.state

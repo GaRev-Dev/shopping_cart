@@ -2,7 +2,7 @@ import { Component } from "react";
 
 const styles = {
     button: {
-        backgroundColor: '#0A283E',
+        backgroundColor: '#007C00',
         color: '#fff',
         padding: '15px 20px',
         border: 'none',

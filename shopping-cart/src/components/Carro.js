@@ -4,7 +4,7 @@ import DetallesCarro from './DetallesCarro'
 
 const styles = {
     carro: {
-        backgroundColor: '#359A2C',
+        backgroundColor: '#00CC00',
         color: '#fff',
         border: 'none',
         padding: '15px',
@@ -22,7 +22,7 @@ class Carro extends Component {
 
 
     render() {
-        const { carro, esCarroVisible, mostrarCarro } = this.props
+        const { carro, esCarroVisible, mostrarCarro} = this.props
         const cantidad = carro.reduce((sum, e) => sum + e.cantidad, 0)
         return (
             <div>
@@ -32,7 +32,7 @@ class Carro extends Component {
                         : null}
                 </span>
                 <button onClick={mostrarCarro} style={styles.carro}>
-                    Carro
+                    Cart
                 </button>
                 {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
 
