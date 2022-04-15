@@ -7,7 +7,10 @@ const styles = {
         boxShadow: '0 5px 5px rgb(0, 0, 0, 0.1)',
         width: '30%',
         padding: '10px 15px',
-        borderRadius: '5px'
+        borderRadius: '5px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     },
     img: {
         width: '100%'
@@ -23,7 +26,7 @@ class Producto extends Component {
                 <h3>{producto.name}</h3>
                 <p>{producto.price}</p>
                 <Button onClick={() => agregarAlCarro(producto)}>
-                    Agregar al carro
+                    Add to cart
                 </Button>
             </div>
         )

@@ -3,7 +3,6 @@ import { Component } from "react";
 const styles = {
     layout: {
         backgroundColor: '#fff',
-        color: '#0A283E',
         alignItems: 'center',
         display: 'flex',
         flexDirection: 'column'
