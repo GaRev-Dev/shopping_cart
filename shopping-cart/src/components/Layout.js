@@ -9,6 +9,9 @@ const styles = {
     },
     container: {
         width: '1200px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center'
     }
 }
 
