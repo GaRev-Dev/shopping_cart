@@ -24,15 +24,19 @@ const styles = {
     }
 }
 
-const DetallesCarro = ({ carro }) => {
-    console.log(carro)
+const DetallesCarro = ({ carro, eliminarDelCarro }) => {
+    // console.log(eliminarDelCarro)
     return (
         <div style={styles.detallesCarro}>
             <ul style={styles.ul}>
-                {carro.map(e => <li style={styles.producto} key={e.name}>
-                    <img alt={e.name} src={e.img} width='50' height='32' />
-                    {e.name} <span> {e.cantidad}</span>
-                </li>)}
+                {carro.map(e => e.cantidad > 0 ?
+                    <li style={styles.producto} key={e.name}>
+                        <img alt={e.name} src={e.img} width='50' height='32' />
+                        {e.name} <span> {e.cantidad} </span>
+                        <a onClick={() => eliminarDelCarro(e)}>-</a>
+                    </li>
+                    :null
+                    )}
             </ul>
         </div>
     )

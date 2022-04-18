@@ -18,7 +18,7 @@ const styles = {
     }
 }
 
-const Carro = ({ carro, esCarroVisible, mostrarCarro }) => {
+const Carro = ({ carro, esCarroVisible, mostrarCarro, eliminarDelCarro }) => {
     const cantidad = carro.reduce((sum, e) => sum + e.cantidad, 0)
     return (
         <div>
@@ -30,7 +30,7 @@ const Carro = ({ carro, esCarroVisible, mostrarCarro }) => {
             <button onClick={mostrarCarro} style={styles.carro}>
                 Cart
             </button>
-            {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
+            {esCarroVisible ? <DetallesCarro carro={carro} eliminarDelCarro={eliminarDelCarro} /> : null}
 
         </div>
     )

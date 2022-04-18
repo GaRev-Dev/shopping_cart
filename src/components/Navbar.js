@@ -16,7 +16,7 @@ const styles = {
     }
 }
 
-const Navbar = ({carro, esCarroVisible, mostrarCarro}) => {
+const Navbar = ({carro, esCarroVisible, mostrarCarro, eliminarDelCarro}) => {
     
     return (
         <nav style={styles.navbar}>
@@ -25,6 +25,7 @@ const Navbar = ({carro, esCarroVisible, mostrarCarro}) => {
             carro={carro}
             esCarroVisible={esCarroVisible}
             mostrarCarro={mostrarCarro}
+            eliminarDelCarro={eliminarDelCarro}
             />
         </nav>
     )
