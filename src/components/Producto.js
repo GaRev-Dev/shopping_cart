@@ -17,20 +17,17 @@ const styles = {
     }
 }
 
-class Producto extends Component {
-    render() {
-        const { producto, agregarAlCarro } = this.props
-        return (
-            <div style={styles.producto}>
-                <h3>{producto.name}</h3>
-                <img style={styles.img} alt={producto.name} src={producto.img} />
-                <p>{producto.price}</p>
-                <Button onClick={() => agregarAlCarro(producto)}>
-                    Add to cart
-                </Button>
-            </div>
-        )
-    }
+const Producto = ({ producto, agregarAlCarro }) => {
+    return (
+        <div style={styles.producto}>
+            <h3>{producto.name}</h3>
+            <img style={styles.img} alt={producto.name} src={producto.img} />
+            <p>{producto.price}</p>
+            <Button onClick={() => agregarAlCarro(producto)}>
+                Add to cart
+            </Button>
+        </div>
+    )
 }
 
 export default Producto

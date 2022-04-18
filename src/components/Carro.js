@@ -18,27 +18,24 @@ const styles = {
     }
 }
 
-class Carro extends Component {
+const Carro = ({ carro, esCarroVisible, mostrarCarro }) => {
+    const cantidad = carro.reduce((sum, e) => sum + e.cantidad, 0)
+    return (
+        <div>
+            <span style={styles.bubble}>
+                {cantidad > 0
+                    ? <BubbleAlert value={cantidad} />
+                    : null}
+            </span>
+            <button onClick={mostrarCarro} style={styles.carro}>
+                Cart
+            </button>
+            {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
 
-
-    render() {
-        const { carro, esCarroVisible, mostrarCarro} = this.props
-        const cantidad = carro.reduce((sum, e) => sum + e.cantidad, 0)
-        return (
-            <div>
-                <span style={styles.bubble}>
-                    {cantidad > 0
-                        ? <BubbleAlert value={cantidad} />
-                        : null}
-                </span>
-                <button onClick={mostrarCarro} style={styles.carro}>
-                    Cart
-                </button>
-                {esCarroVisible ? <DetallesCarro carro={carro} /> : null}
-
-            </div>
-        )
-    }
+        </div>
+    )
 }
+
+
 
 export default Carro

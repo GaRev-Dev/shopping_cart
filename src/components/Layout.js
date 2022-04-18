@@ -15,16 +15,14 @@ const styles = {
     }
 }
 
-class Layout extends Component {
-    render() {
-        return (
-            <div style={styles.layout}>
-                <div style={styles.container}>
-                    {this.props.children}
-                </div>
+const Layout = ({children}) => {
+    return (
+        <div style={styles.layout}>
+            <div style={styles.container}>
+                {children}
             </div>
-        )
-    }
+        </div>
+    )
 }
 
 export default Layout

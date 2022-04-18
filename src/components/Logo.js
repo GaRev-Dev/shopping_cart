@@ -8,14 +8,12 @@ const styles = {
     }
 }
 
-class Logo extends Component {
-    render() {
-        return (
-            <div style={styles.logo}>
-                React Shopping Cart
-            </div>
-        )
-    }
+const Logo = () => {
+    return (
+        <div style={styles.logo}>
+            React Shopping Cart
+        </div>
+    )
 }
 
 export default Logo

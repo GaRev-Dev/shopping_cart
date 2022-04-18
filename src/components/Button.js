@@ -11,12 +11,11 @@ const styles = {
     }
 }
 
-class Button extends Component {
-    render() {
-        return(
-            <button style={styles.button} {...this.props}/>
-        )
-    }
+const Button = (props) => {
+    return(
+        <button style={styles.button} {...props}/>
+    )
 }
+
 
 export default Button

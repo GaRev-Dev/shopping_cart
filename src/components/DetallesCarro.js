@@ -19,25 +19,24 @@ const styles = {
         display: 'flex',
         justifyContent: 'space-between',
         alignItems: 'center',
-        padding:' 25px 20px',
+        padding: ' 25px 20px',
         borderBottom: 'solid 1px #aaa'
     }
 }
 
-class DetallesCarro extends Component {
-    render() {
-        const { carro } = this.props
-        console.log(carro)
-        return (
-            <div style={styles.detallesCarro}>
-                <ul style={styles.ul}>
-                    {carro.map(e => <li style={styles.producto} key={e.name}>
-                        <img alt={e.name} src={e.img} width='50' height='32'/>
-                        {e.name} <span> {e.cantidad}</span>
-                    </li>)}
-                </ul>
-            </div>
-        )
-    }
+const DetallesCarro = ({ carro }) => {
+    console.log(carro)
+    return (
+        <div style={styles.detallesCarro}>
+            <ul style={styles.ul}>
+                {carro.map(e => <li style={styles.producto} key={e.name}>
+                    <img alt={e.name} src={e.img} width='50' height='32' />
+                    {e.name} <span> {e.cantidad}</span>
+                </li>)}
+            </ul>
+        </div>
+    )
 }
+
+
 export default DetallesCarro
